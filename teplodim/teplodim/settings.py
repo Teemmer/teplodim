@@ -26,7 +26,6 @@ SECRET_KEY = ')@vch53d+!dqs%q=ajex3-mr_$#ee(k#9doayu-i12#)-=4p&_'
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '91.241.113.69', '192.168.0.102']
-teplodim
 
 # Application definition
 
