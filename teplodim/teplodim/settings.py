@@ -25,8 +25,8 @@ SECRET_KEY = ')@vch53d+!dqs%q=ajex3-mr_$#ee(k#9doayu-i12#)-=4p&_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
-
+ALLOWED_HOSTS = ['localhost', '91.241.113.69', '192.168.0.102']
+teplodim
 
 # Application definition
 
@@ -125,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = '/admin/login/'
 
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),

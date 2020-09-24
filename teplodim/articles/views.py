@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import user_passes_test
 
 from .helper import send_async_mail
 from .models import Article
@@ -36,3 +37,23 @@ class AboutView(View):
     def get(self, request, *args, **kwargs):
 
         return render(request, self.template_name)
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def add_article_view(request, *args, **kwargs):
+    if request.method == 'POST':
+        pass
+    return render(request, 'edit_panel.html')
+
+
+class ArticleDetailView(View):
+    template_name = 'article_detail_template.html'
+
+    def get(self, request, article_id, *args, **kwargs):
+        article = get_object_or_404(Article, pk=article_id)
+        images = [a.image for a in article.images.all()]
+        images.insert(0, article.image)
+        files = list(article.files.all())
+        return render(request, self.template_name, {'article': article,
+                                                    'images': images,
+                                                    'files': files})

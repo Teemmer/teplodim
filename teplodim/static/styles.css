@@ -13,7 +13,11 @@ input:focus {
 }
 
 input {
-    min-width: 200px !important;
+    min-width: 160px !important;
+}
+.from-20-to-40 {
+    min-width: 25px !important;
+    max-width: 60px !important;
 }
 
 label {
@@ -34,4 +38,40 @@ label {
 
 .mrg-bot {
     margin-bottom: 20px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #0D47A1 !important;
+}
+
+.indicators {
+    z-index: 100 !important;
+}
+
+.slider {
+    height: auto !important;
+}
+
+.card-image {
+    display: flex;
+    align-items: center;
+}
+
+.parallax-container {
+    height: 250px;
+}
+
+.search {
+    padding-left: 7px;
+    min-width: 140px;
+    width: 90%;
+}
+
+.centered {
+    display: flex;
+    width: 10%;
+    min-width: 30px;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
 }

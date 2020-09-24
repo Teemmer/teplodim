@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="parallax-container">
+      <div class="parallax">
+          <div class="parallax-text">
+            <p class="flow-text">ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ "УПРАВЛЯЮЧА КОМПАНІЯ "ТЕПЛОДІМ"</p>
+          </div>
+          <img src="/static/header_big.jpg">
+      </div>
+    </div>
   <div class="container">
+<!--      <div class="row">-->
+<!--      <div class="card horizontal">-->
+<!--          <div class="search">-->
+<!--                <input id="icon_prefix_search" name="message" placeholder="Пошук"/>-->
+<!--          </div>-->
+<!--          <a class="centered" href="/home/?search="><i class="material-icons prefix">search</i></a>-->
+<!--      </div>-->
+<!--        <div class="card-action">-->
+
+<!--        </div>-->
+<!--  </div>-->
+
     {% for article in page_obj %}
       <div class="row">
       <div class="card">
@@ -13,7 +33,7 @@
           <p>{{ article.date_created }}</p>
         </div>
         <div class="card-action">
-          <a href="#">Дивитися далі</a>
+          <a href="/articles/{{ article.id }}">Дивитися далі</a>
         </div>
     </div>
   </div>
@@ -21,15 +41,15 @@
     <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Попередня</a>
         {% endif %}
 
         <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            Сторінка {{ page_obj.number }} з {{ page_obj.paginator.num_pages }}.
         </span>
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.next_page_number }}">Наступна</a>
         {% endif %}
     </span>
 </div>

@@ -17,6 +17,7 @@
                     <label for="icon_f_name">Ім'я</label>
                     <span class="helper-text" data-success="Добре!"></span>
                 </div>
+                <div class="col m1"></div>
                 <div class="input-field col s12 m5">
                     <i class="material-icons prefix">account_box</i>
                     <input id="icon_l_name" name="l_name" type="text" class="validate">
@@ -24,15 +25,14 @@
                     <span class="helper-text" data-success="Добре!"></span>
                 </div>
             </div>
-            <div class="input-field col s6">
+            <div class="input-field col s12 m5">
                 <i class="material-icons prefix">phone</i>
                 <input id="icon_telephone" name="phone" type="tel" class="validate">
                 <span class="helper-text" data-error="wrong" data-success="Добре!"></span>
                 <label for="icon_telephone">Телефон</label>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s6">
+            <div class="col m1"></div>
+            <div class="input-field col s12 m5">
                 <i class="material-icons prefix">email</i>
                 <input id="icon_email" name="email" type="email" class="validate">
                 <label for="icon_email">Електронна пошта</label>
@@ -40,23 +40,41 @@
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s13">
-                <i class="material-icons prefix">article</i>
-                <input id="icon_subject" name="subject" type="text" class="validate" required>
-                <label for="icon_subject">Тема повідомлення (можна вказати адресу)</label>
+            <div class="input-field col s8 m6">
+                <i class="material-icons prefix">mode_edit</i>
+                <input id="icon_street" name="street" type="text" class="validate">
+                <label for="icon_street">Вулиця</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
+            <div class="input-field col s2 m1">
+                <input class="from-20-to-40" id="icon_house" name="house" type="number" class="validate">
+                <label for="icon_house">буд.</label>
+                <span class="helper-text" data-error="wrong"></span>
+            </div>
+            <div class="input-field col s2 m1">
+                <input class="from-20-to-40" id="icon_flat" name="flat" type="number" class="validate">
+                <label for="icon_flat">кв.</label>
                 <span class="helper-text" data-error="wrong"></span>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s13">
+            <div class="input-field col s12 m11">
+                <i class="material-icons prefix">article</i>
+                <input id="icon_subject" name="subject" type="text" class="validate" required>
+                <label for="icon_subject">Тема повідомлення</label>
+                <span class="helper-text" data-error="Дане поле не може бути незаповненим"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m11">
                 <i class="material-icons prefix">mode_edit</i>
                 <textarea id="icon_prefix2" name="message" class="materialize-textarea validate" required></textarea>
                 <label for="icon_prefix2">Ваше повідомлення</label>
-                <span class="helper-text" data-error="wrong"></span>
+                <span class="helper-text" data-error="Дане поле не може бути незаповненим"></span>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s12 mrg-bot">
+            <div class="input-field col s12 m11 mrg-bot">
                 <button class="btn waves-effect waves-light right" type="submit" name="action">Надіслати
                     <i class="material-icons right">send</i>
                 </button>

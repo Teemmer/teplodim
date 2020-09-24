@@ -14,3 +14,8 @@ class Article(models.Model):
 class File(models.Model):
     article = models.ForeignKey(Article, related_name='files', on_delete=models.CASCADE)
     file = models.FileField(upload_to='uploads/')
+
+
+class Image(models.Model):
+    article = models.ForeignKey(Article, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='uploads/')
