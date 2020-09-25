@@ -1,18 +1,18 @@
 .active {
-    color: #0D47A1 !important;
+    color: #388E3C !important;
 }
 
 textarea:focus{
-    border-bottom: 1px solid #0D47A1 !important;
-    box-shadow: 0 1px 0 0 #0D47A1 !important;
+    border-bottom: 1px solid #388E3C !important;
+    box-shadow: 0 1px 0 0 #388E3C !important;
 }
 
 input:focus {
-    border-bottom: 1px solid #0D47A1 !important;
-    box-shadow: 0 1px 0 0 #0D47A1 !important;
+    border-bottom: 1px solid #388E3C !important;
+    box-shadow: 0 1px 0 0 #388E3C !important;
 }
 
-input {
+input[type=text] {
     min-width: 160px !important;
 }
 .from-20-to-40 {
@@ -41,7 +41,7 @@ label {
 }
 
 .slider .indicators .indicator-item.active {
-    background-color: #0D47A1 !important;
+    background-color: #388E3C !important;
 }
 
 .indicators {
@@ -74,4 +74,14 @@ label {
     justify-content: center;
     align-items: center;
     justify-self: flex-end;
+}
+
+.header-text-wrapper {
+    display: flex;
+    min-height: 120px !important;
+    justify-content: center;
+}
+
+.header-text {
+    width: 80%;
 }

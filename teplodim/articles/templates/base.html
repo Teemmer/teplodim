@@ -11,57 +11,69 @@
 </head>
 <body>
 <!--<div class="navbar-fixed">-->
-  <nav class="blue darken-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="right brand-logo">Logo</a>
-      <ul class="left hide-on-med-and-down ">
-        <li><a href="/home/">Головна</a></li>
-        <li><a href="/contact/">Зв'яжіться з нами</a></li>
-        <li><a href="/about/">Про "Теплодім"</a></li>
-      </ul>
+<nav class="green darken-2" role="navigation">
+    <div class="nav-wrapper container">
+        <ul class="left hide-on-med-and-down ">
+            <li><a href="/home/">Головна</a></li>
+            <li><a href="/contact/">Зв'яжіться з нами</a></li>
+            <li><a href="/services/">Послуги</a></li>
+            <li><a href="/contacts/">Контакти</a></li>
+            <li><a href="/about/">Про "Теплодім"</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="/home/">Головна</a></li>
-        <li><a href="/contact/">Зв'яжіться з нами</a></li>
-        <li><a href="/about/">Про "Теплодім"</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="/home/">Головна</a></li>
+            <li><a href="/contact/">Зв'яжіться з нами</a></li>
+            <li><a href="/services/">Послуги</a></li>
+            <li><a href="/contacts/">Контакти</a></li>
+            <li><a href="/about/">Про "Теплодім"</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-  </nav>
+</nav>
 <!--</div>-->
 {% block content %}
 {% endblock %}
 
-    <footer class="page-footer orange">
+<footer class="page-footer green darken-3">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">ТзОВ "УК "Теплодім"</h5>
-          <p class="grey-text text-lighten-4"></p>
+        <div class="row">
+            <div class="col l6 m4 s12">
+                <h5 class="white-text">ТзОВ "УК "Теплодім"</h5>
+                <p class="grey-text text-lighten-4">
+                    м.Калуш, вул. Пушкіна буд.9а <br/>
+                    Телефон: +380957657982 <br/>
+                    Електронна пошта:
+                    teplodim2018@ukr.net <br/>
+                    Директор: Фурда Василь Саверійович
+                </p>
 
 
+            </div>
+            <div class="col l3 m4 s12">
+                <h5 class="white-text">Навігація</h5>
+                <ul>
+                    <li><a class="white-text" href="/home/">Головна</a></li>
+                    <li><a class="white-text" href="/contact/">Зв'яжіться з нами</a></li>
+                    <li><a class="white-text" href="/services/">Послуги</a></li>
+                    <li><a class="white-text" href="/contacts/">Контакти</a></li>
+                    <li><a class="white-text" href="/about/">Про "Теплодім"</a></li>
+                </ul>
+            </div>
+            <div class="col l3 m4 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                    <li><a class="white-text" href="/admin/">Додати інформацію</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="/home/">Головна</a></li>
-            <li><a class="white-text" href="/contact/">Зв'яжіться з нами</a></li>
-            <li><a class="white-text" href="/about/">Про "Теплодім"</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="/edit_panel/">Додати інформацію</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Dmytro Tymkiv</a>
-      </div>
+        <div class="container">
+            Made by <a class="grey-text" href="https://www.instagram.com/dmass_tymkiv/">Dmytro Tymkiv</a>
+        </div>
     </div>
-  </footer>
+</footer>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="application/javascript" src="{% static 'materialize.js' %}" ></script>

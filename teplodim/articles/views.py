@@ -3,7 +3,7 @@ from django.views import View
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import user_passes_test
 
-from .helper import send_async_mail
+from .helper import send_async_mail, params_list
 from .models import Article
 
 
@@ -27,7 +27,11 @@ class ContactView(View):
     def post(self, request, *args, **kwargs):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
-        send_async_mail(subject, message)
+        parameters = {}
+        for m in params_list:
+            if request.POST.get(m):
+                parameters[m] = request.POST.get(m)
+        send_async_mail(subject, message, parameters)
         return render(request, self.template_name, {'sent': True})
 
 
@@ -36,6 +40,20 @@ class AboutView(View):
 
     def get(self, request, *args, **kwargs):
 
+        return render(request, self.template_name)
+
+
+class ServicesView(View):
+    template_name = 'services_template.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
+
+
+class ContactsView(View):
+    template_name = 'contacts_template.html'
+
+    def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
 

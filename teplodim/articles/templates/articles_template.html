@@ -1,25 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="green lighten-1 white-text ">
+    <div class="header-text-wrapper">
+        <div class="header-text">
+            <h5>УПРАВЛЯЮЧА КОМПАНІЯ
+                ТЕПЛОДІМ - Професійне управління та
+                експлуатація
+                багатоквартирних будинків
+                та ОСББ</h5>
+        </div>
+    </div>
+</div>
 <div class="parallax-container">
       <div class="parallax">
-          <div class="parallax-text">
-            <p class="flow-text">ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ "УПРАВЛЯЮЧА КОМПАНІЯ "ТЕПЛОДІМ"</p>
-          </div>
           <img src="/static/header_big.jpg">
       </div>
-    </div>
+</div>
   <div class="container">
-<!--      <div class="row">-->
-<!--      <div class="card horizontal">-->
-<!--          <div class="search">-->
-<!--                <input id="icon_prefix_search" name="message" placeholder="Пошук"/>-->
-<!--          </div>-->
-<!--          <a class="centered" href="/home/?search="><i class="material-icons prefix">search</i></a>-->
-<!--      </div>-->
-<!--        <div class="card-action">-->
-
-<!--        </div>-->
-<!--  </div>-->
 
     {% for article in page_obj %}
       <div class="row">
@@ -33,7 +30,7 @@
           <p>{{ article.date_created }}</p>
         </div>
         <div class="card-action">
-          <a href="/articles/{{ article.id }}">Дивитися далі</a>
+          <a class="green-text" href="/articles/{{ article.id }}">Дивитися далі</a>
         </div>
     </div>
   </div>
