@@ -7,7 +7,6 @@ from .views import (
     AboutView,
     ContactView,
     ArticleDetailView,
-    add_article_view,
     ServicesView,
     ContactsView
 )
@@ -19,7 +18,6 @@ urlpatterns = [
     path('contacts/', ContactsView.as_view(), name='contacts'),
     path('services/', ServicesView.as_view(), name='services'),
     path('about/', AboutView.as_view(), name='about'),
-    path('edit_panel/', add_article_view, name='panel'),
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/favicon.ico'), name='favicon'),
     path('', HomeView.as_view(), name='home'),
 ]

@@ -1,9 +1,24 @@
 from django.contrib import admin
-from django.contrib.admin import AdminSite
 
 from .models import Article, File, Image
 
 
-admin.site.register(Article)
-admin.site.register(File)
-admin.site.register(Image)
+class ImageInline(admin.TabularInline):
+    model = Image
+
+
+class FileInline(admin.TabularInline):
+    model = File
+
+
+class ArticleAdmin(admin.ModelAdmin):
+    inlines = [
+        ImageInline,
+        FileInline
+    ]
+
+    class Meta:
+        model = Article
+
+
+admin.site.register(Article, ArticleAdmin)
