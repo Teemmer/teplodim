@@ -25,14 +25,6 @@ label {
     min-width: 195px !important;
 }
 
-.row .col.s13 {
-    margin-bottom: 0px !important;
-    width: 100%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-}
-
 .row {
     margin-bottom: 0px !important;
 }
@@ -49,9 +41,6 @@ label {
     z-index: 100 !important;
 }
 
-.slider {
-    height: auto !important;
-}
 
 .card-image {
     display: flex;
@@ -60,21 +49,6 @@ label {
 
 .parallax-container {
     height: 250px;
-}
-
-.search {
-    padding-left: 7px;
-    min-width: 140px;
-    width: 90%;
-}
-
-.centered {
-    display: flex;
-    width: 10%;
-    min-width: 30px;
-    justify-content: center;
-    align-items: center;
-    justify-self: flex-end;
 }
 
 .header-text-wrapper {
