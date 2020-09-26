@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from .settings_local import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')@vch53d+!dqs%q=ajex3-mr_$#ee(k#9doayu-i12#)-=4p&_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -72,21 +72,6 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR.pare
 WSGI_APPLICATION = 'teplodim.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'teplodim',
-        'USER': 'teemmer',
-        'PASSWORD': 'teemmer',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -130,12 +115,3 @@ LOGIN_URL = '/admin/login/'
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static/'),
 )
-
-#MEDIA_ROOT = 'uploads/'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dziga2000@gmail.com'
-EMAIL_HOST_PASSWORD = 'Gampadamagam'
